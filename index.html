@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anup Sahu · Cryptrion Hub</title>
+<meta name="description" content="Main site, portfolio, projects and LinkedIn of Anup Sahu in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a1118; --panel:#101a24; --line:#1f3040; --text:#e6eef5; --muted:#8aa0b2;
+  --signal:#3ee6c4; --warn:#ffb454;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.55;min-height:100vh;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:56px 56px;background-position:-1px -1px}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 20% 0%,transparent 0,var(--bg) 70%);pointer-events:none}
+main{position:relative;max-width:880px;margin:0 auto;padding:72px 24px 48px}
+h1{font-size:clamp(2.6rem,8vw,5rem);line-height:1;font-weight:700;letter-spacing:-.03em}
+.sub{margin-top:20px;color:var(--muted);max-width:52ch;font-size:1.1rem}
+.status{margin-top:28px;display:inline-flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--signal);border:1px solid var(--line);background:var(--panel);padding:6px 12px;border-radius:4px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--signal);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+h2{font-size:1rem;font-weight:500;color:var(--muted);margin:56px 0 12px}
+.list{border:1px solid var(--line);background:var(--panel);border-radius:6px;overflow:hidden}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 24px;align-items:center;padding:20px 22px;color:inherit;text-decoration:none;border-bottom:1px solid var(--line);position:relative;transition:background .15s}
+.row:last-child{border-bottom:0}
+.row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--signal);transform:scaleY(0);transition:transform .15s}
+.row:hover,.row:focus-visible{background:#15222f;outline:0}
+.row:hover::before,.row:focus-visible::before{transform:scaleY(1)}
+.row.main::before{transform:scaleY(1);background:var(--warn)}
+.name{font-size:1.25rem;font-weight:700}
+.desc{grid-column:1;color:var(--muted);font-size:.95rem}
+.host{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--signal);grid-column:2;grid-row:1;text-align:right}
+.tag{grid-column:2;grid-row:2;justify-self:end;font-size:.8rem;color:var(--text);border:1px solid var(--line);padding:2px 10px;border-radius:99px}
+.row:hover .tag{border-color:var(--signal);color:var(--signal)}
+footer{margin-top:56px;color:var(--muted);font-size:.85rem;font-family:'IBM Plex Mono',monospace}
+@media(max-width:560px){
+  main{padding-top:48px}
+  .row{grid-template-columns:1fr}
+  .host,.tag{grid-column:1;grid-row:auto;justify-self:start;text-align:left}
+}
+@media(prefers-reduced-motion:reduce){.dot{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Anup Sahu</h1>
+  <p class="sub">Cybersecurity projects, my portfolio and where to find me. Pick a destination below.</p>
+  <div class="status"><span class="dot"></span>All links online</div>
+
+  <h2>Start here</h2>
+  <div class="list">
+    <a class="row main" href="https://cryptrion-cyber.vercel.app/" target="_blank" rel="noopener">
+      <span class="name">Cryptrion Cyber</span>
+      <span class="host">cryptrion-cyber.vercel.app</span>
+      <span class="desc">The main site. Open this first.</span>
+      <span class="tag">Main site</span>
+    </a>
+    <a class="row" href="https://anup-sahu-portfolio.vercel.app/" target="_blank" rel="noopener">
+      <span class="name">Portfolio</span>
+      <span class="host">anup-sahu-portfolio.vercel.app</span>
+      <span class="desc">About me, skills and everything I have built.</span>
+      <span class="tag">Portfolio</span>
+    </a>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="list">
+    <a class="row" href="https://cryptrion-threats.vercel.app/" target="_blank" rel="noopener">
+      <span class="name">Cryptrion Threats</span>
+      <span class="host">cryptrion-threats.vercel.app</span>
+      <span class="desc">Threat-focused companion project to Cryptrion Cyber.</span>
+      <span class="tag">Live project</span>
+    </a>
+    <a class="row" href="https://github.com/SuperANUP07/cryptrion-cyber" target="_blank" rel="noopener">
+      <span class="name">Cryptrion Cyber source code</span>
+      <span class="host">github.com/SuperANUP07</span>
+      <span class="desc">Browse the repository behind the main site.</span>
+      <span class="tag">GitHub</span>
+    </a>
+  </div>
+
+  <h2>Connect</h2>
+  <div class="list">
+    <a class="row" href="https://www.linkedin.com/in/anup-sahu-6742aa1b8/" target="_blank" rel="noopener">
+      <span class="name">LinkedIn</span>
+      <span class="host">linkedin.com/in/anup-sahu</span>
+      <span class="desc">Experience, background and ways to get in touch.</span>
+      <span class="tag">Profile</span>
+    </a>
+  </div>
+
+  <footer>© 2026 Anup Sahu</footer>
+</main>
+</body>
+</html>
